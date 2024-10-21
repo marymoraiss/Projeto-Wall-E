@@ -1,17 +1,21 @@
 # Projeto-Wall-E
-Este projeto visa consolidar os conhecimentos adquiridos até o momento, aplicando-os de maneira prática com o uso do microcontrolador ESP32. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outras pessoas possam visualizar e compreender o trabalho realizado.
+Dupla: Maria A. Morais e Raul D. Alves
+Proposta de Projeto: Movimentação do Robô Wall-E
 
-O uso do ESP32 permite explorar diversas áreas, como Internet das Coisas (IoT), automação e controle de dispositivos, e comunicação via Wi-Fi ou Bluetooth, o que possibilita a criação de soluções inovadoras e interativas.
+Importância:
+Este projeto visa consolidar os conhecimentos adquiridos nas disciplinas cursadas até o momento, aplicando-os de maneira prática. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outros possam visualizar e compreender o trabalho realizado.
 
-O projeto incluirá as seguintes etapas:
+Objetivo:
+Desenvolver a movimentação do robô Wall-E, utilizando controle remoto via web. A proposta inicial é realizar os primeiros testes por meio de uma interface controlada pelo computador.
 
-Definição dos Objetivos: Clarificar as funcionalidades e aplicações que serão implementadas com o ESP32, como monitoramento de sensores, controle de dispositivos ou comunicação de dados.
+Tópicos:
 
-Desenvolvimento: Elaborar o código necessário utilizando as bibliotecas apropriadas para o ESP32, integrando os sensores e atuadores. O desenvolvimento poderá incluir o uso de protocolos como MQTT ou HTTP para comunicação.
+Servos Motores:
+Serão utilizados os servos motores já instalados no robô para permitir sua movimentação de forma controlada.
 
-Testes e Validação: Realizar testes para garantir que o sistema funcione conforme planejado, ajustando o código e a configuração do hardware sempre que necessário.
+ESP32:
+O ESP32 será utilizado como unidade central para controlar o robô e gerenciar os componentes eletrônicos.
 
-Documentação: Detalhar o processo de desenvolvimento, incluindo explicações sobre o código, os componentes utilizados e a lógica por trás das implementações.
-
-Apresentação: Preparar uma apresentação interativa que mostre o funcionamento do sistema, destacando as principais características e inovações.
+Controle:
+O controle do robô será realizado via web, com a comunicação feita por Wi-Fi. Inicialmente, será possível controlá-lo pelo computador, com a possibilidade de expandir para outros tipos de controle futuramente.
 
