@@ -1,21 +1,8 @@
 # Projeto-Wall-E
-Dupla: Maria A. Morais e Raul D. Alves
-Proposta de Projeto: Movimentação do Robô Wall-E
+Maria A. Morais e Raul D. Alves estão desenvolvendo um projeto intitulado "Movimentação do Robô Wall-E", com o objetivo de consolidar os conhecimentos adquiridos ao longo das disciplinas cursadas até o momento, aplicando-os de forma prática. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outras pessoas possam visualizar e compreender o trabalho realizado.
 
-Importância:
-Este projeto visa consolidar os conhecimentos adquiridos nas disciplinas cursadas até o momento, aplicando-os de maneira prática. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outros possam visualizar e compreender o trabalho realizado.
+O objetivo principal é desenvolver a movimentação do robô Wall-E, utilizando controle remoto via web. A proposta inicial envolve realizar os primeiros testes por meio de uma interface controlada pelo computador, com a possibilidade de expandir o controle futuramente.
 
-Objetivo:
-Desenvolver a movimentação do robô Wall-E, utilizando controle remoto via web. A proposta inicial é realizar os primeiros testes por meio de uma interface controlada pelo computador.
+Para permitir a movimentação controlada do robô, serão utilizados os servos motores já instalados no projeto. A unidade central responsável pelo controle e gerenciamento dos componentes eletrônicos será o ESP32, que se destaca por sua capacidade de conexão à rede Wi-Fi.
 
-Tópicos:
-
-Servos Motores:
-Serão utilizados os servos motores já instalados no robô para permitir sua movimentação de forma controlada.
-
-ESP32:
-O ESP32 será utilizado como unidade central para controlar o robô e gerenciar os componentes eletrônicos.
-
-Controle:
-O controle do robô será realizado via web, com a comunicação feita por Wi-Fi. Inicialmente, será possível controlá-lo pelo computador, com a possibilidade de expandir para outros tipos de controle futuramente.
-
+O controle do robô será feito via web, com a comunicação acontecendo por meio de Wi-Fi, possibilitando um controle remoto mais flexível e acessível. A princípio, o controle será realizado pelo computador, mas outros métodos poderão ser implementados à medida que o projeto evolui.
