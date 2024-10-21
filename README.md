@@ -1,5 +1,5 @@
 # Projeto-Wall-E
-Maria A. Morais e Raul D. Alves estão desenvolvendo um projeto intitulado "Movimentação do Robô Wall-E", com o objetivo de consolidar os conhecimentos adquiridos ao longo das disciplinas cursadas até o momento, aplicando-os de forma prática. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outras pessoas possam visualizar e compreender o trabalho realizado.
+Maria A. Morais e Raul D. Alves estão desenvolvendo um projeto intitulado "Movimentação do Robô Wall-E", com o objetivo de consolidar os conhecimentos adquiridos ao longo do curso até o momento, aplicando-os de forma prática. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outras pessoas possam visualizar e compreender o trabalho realizado.
 
 O objetivo principal é desenvolver a movimentação do robô Wall-E, utilizando controle remoto via web. A proposta inicial envolve realizar os primeiros testes por meio de uma interface controlada pelo computador, com a possibilidade de expandir o controle futuramente.
 
