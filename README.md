@@ -15,6 +15,3 @@ Documentação: Detalhar o processo de desenvolvimento, incluindo explicações 
 
 Apresentação: Preparar uma apresentação interativa que mostre o funcionamento do sistema, destacando as principais características e inovações.
 
-Feedback: Receber comentários sobre o projeto para futuras melhorias e iterações.
-
-Esse projeto com ESP32 demonstrará de forma prática o potencial dos conhecimentos adquiridos nas disciplinas e oferecerá uma aplicação real para a tecnologia estudada.
