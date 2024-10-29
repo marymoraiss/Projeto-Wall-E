@@ -1,7 +1,7 @@
 # Movimentação do Robô Wall-E
 
 # Concepção
-Maria A. Morais e Raul D. Alves estão desenvolvendo um projeto intitulado "Movimentação do Robô Wall-E", com o objetivo de consolidar os conhecimentos adquiridos ao longo do curso até o momento, aplicando-os de forma prática. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outras pessoas possam visualizar e compreender o trabalho realizado.
+A Internet das Coisas (IoT) oferece soluções inovadoras para integrar dispositivos à internet, trazendo avanços em sustentabilidade, gestão inteligente e eficiência energética. Este projeto pretende demonstrar o controle remoto de um robô, usando uma interface web para simular interações práticas entre a tecnologia IoT e o mundo físico, incentivando aplicações sustentáveis e a acessibilidade a essa tecnologia.
 
  No Laboratório de Pesquisa Avançada em Eletrônica (LPAE) do Instituto Federal de Santa Catarina (IFSC), campus Florianópolis, existe uma estrutura de robô Wall-E (inspirado no filme "Wall-E"). Essa carcaça, impressa em 3D com base plástica, possui oito motores instalados e conta com um circuito de alimentação disponível. O projeto está focado na movimentação desse robô, utilizando um ESP32 para controle via Wi-Fi.
 
@@ -9,9 +9,16 @@ Maria A. Morais e Raul D. Alves estão desenvolvendo um projeto intitulado "Movi
  
  Fonte: (https://github.com/MatheusPinto/PI_IFSC_2023_02/tree/main/equipe_LuLu/conceive)
 
+# Componentes Principais
+Estrutura do Robô Wall-E:
+- Carcaça de plástico, impressa em 3D no LPAE do IFSC.
+- 8 motores já instalados na estrutura.
 
-//O objetivo principal é desenvolver a movimentação do robô Wall-E, utilizando controle remoto via web. A proposta inicial envolve realizar os primeiros testes por meio de uma interface controlada pelo computador, com a possibilidade de expandir o controle futuramente.
+Microcontrolador:
+- ESP32: processador com conectividade Wi-Fi, permitindo comunicação web.
 
-//Para permitir a movimentação controlada do robô, serão utilizados os servos motores já instalados no projeto. A unidade central responsável pelo controle e gerenciamento dos componentes eletrônicos será o ESP32, que se destaca por sua capacidade de conexão à rede Wi-Fi.
+Circuito de Alimentação:
+- Fonte de alimentação ja existente.
 
-//O controle do robô será feito via web, com a comunicação acontecendo por meio de Wi-Fi, possibilitando um controle remoto mais flexível e acessível. A princípio, o controle será realizado pelo computador, mas outros métodos poderão ser implementados à medida que o projeto evolui.
+Interface Web:
+- Desenvolvimento de uma interface simples e responsiva que permita o controle de direção e movimentação do robô remotamente.
