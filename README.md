@@ -1,4 +1,4 @@
-# Projeto-Wall-E
+# Movimentação do Robô Wall-E
 Maria A. Morais e Raul D. Alves estão desenvolvendo um projeto intitulado "Movimentação do Robô Wall-E", com o objetivo de consolidar os conhecimentos adquiridos ao longo do curso até o momento, aplicando-os de forma prática. Além disso, o projeto será desenvolvido para ser exposto, permitindo que outras pessoas possam visualizar e compreender o trabalho realizado.
 
  No Laboratório de Pesquisa Avançada em Eletrônica (LPAE) do Instituto Federal de Santa Catarina (IFSC), campus Florianópolis, existe uma estrutura de robô Wall-E (inspirado no filme "Wall-E"). Essa carcaça, impressa em 3D com base plástica, possui oito motores instalados e conta com um circuito de alimentação disponível. O projeto está focado na movimentação desse robô, utilizando um ESP32 para controle via Wi-Fi.
