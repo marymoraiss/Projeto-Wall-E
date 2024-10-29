@@ -38,12 +38,11 @@ Foco em uma programação eficiente dos motores, reduzindo consumo excessivo de 
 
 # Interface com o Usuário
 A interface deve permitir:
-Operar o robô Wall-E remotamente via comunicação Wi-Fi.
-Controlar a direção e velocidade do robô.
-Ajustar a movimentação dos braços e da cabeça de Wall-E.
-Gerenciar o funcionamento dos motores.
+- Gerenciar o funcionamento dos motores.
+- Operar o robô Wall-E remotamente via comunicação Wi-Fi.
+- Controlar a direção e velocidade do robô.
+- Ajustar a movimentação dos braços e da cabeça de Wall-E.
 
-Ideias para Funcionalidades Extras
-Caso haja tempo adicional, considere implementar:
-Movimentos padronizados acionados com um único comando.
-Alto-falantes para simular sons e tornar o Wall-E mais interativo e expressivo.
+Ideias para Funcionalidades Extras, caso haja tempo adicional, considere implementar:
+- Movimentos padronizados acionados com um único comando.
+- Alto-falantes para simular sons e tornar o Wall-E mais interativo e expressivo.
