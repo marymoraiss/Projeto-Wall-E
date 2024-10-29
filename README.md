@@ -36,8 +36,8 @@ A interface será projetada para enviar comandos ao ESP32, que controlará os mo
 Movimentação:
 Foco em uma programação eficiente dos motores, reduzindo consumo excessivo de energia. O sistema deve permitir modos de operação que otimizem a duração e uso da alimentação disponível.
 
-# Interface com o Usuário
-A interface deve permitir:
+# Objetivo
+A interface com o usuário que permita:
 - Gerenciar o funcionamento dos motores.
 - Operar o robô Wall-E remotamente via comunicação Wi-Fi.
 - Controlar a direção e velocidade do robô.
@@ -46,3 +46,15 @@ A interface deve permitir:
 Ideias para Funcionalidades Extras, caso haja tempo adicional, considere implementar:
 - Movimentos padronizados acionados com um único comando.
 - Alto-falantes para simular sons e tornar o Wall-E mais interativo e expressivo.
+
+# Lista dos principais materiais e ferramentas do projeto:
+- Carcaça do Wall-e impressa em 3D
+- ASP32
+- 8 Motores (2 de corrente contínua e 6 de passo)
+- Drivers de motores
+- Computador (para gerenciar o Wall-e)
+- Auto-falates caso haja tempo de implementar.
+
+# Diagrama de blocos para implementação do projeto
+
+.......
