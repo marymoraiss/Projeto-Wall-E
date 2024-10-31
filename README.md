@@ -53,6 +53,4 @@ Ideias para Funcionalidades Extras, caso haja tempo adicional, considere impleme
 - Computador (para gerenciar o Wall-e)
 - Auto-falates caso haja tempo de implementar.
 
-# Diagrama de blocos para implementação do projeto
 
-.......
