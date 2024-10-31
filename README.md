@@ -3,7 +3,7 @@
 # Movimentação do Robô Wall-E
 A Internet das Coisas (IoT) oferece soluções inovadoras para integrar dispositivos à internet, gestão inteligente e eficiência energética. Este projeto pretende demonstrar o controle remoto de um robô, usando uma interface web para simular interações práticas entre a tecnologia IoT e o mundo físico.
 
-No Laboratório de Pesquisa Avançada em Eletrônica (LPAE) do Instituto Federal de Santa Catarina (IFSC), campus Florianópolis, existe uma estrutura de robô Wall-E (inspirado no filme "Wall-E"). Essa carcaça, impressa em 3D com base plástica, possui oito motores instalados e conta com um circuito de alimentação disponível. O projeto está focado na movimentação desse robô, utilizando um ESP32 para controle via Wi-Fi.
+No Laboratório de Pesquisa Avançada em Eletrônica (LPAE) do Instituto Federal de Santa Catarina (IFSC), campus Florianópolis, existe uma estrutura de robô Wall-E (inspirado no filme "Wall-E"). Essa carcaça, impressa em 3D com base plástica, possui oito motores instalados e conta com um circuito de alimentação disponível (https://www.thingiverse.com/thing:3703555/files#google_vignette). O projeto está focado na movimentação desse robô, utilizando um ESP32 para controle via Wi-Fi.
 
  ![walle](https://github.com/user-attachments/assets/804b2c7f-31a3-4bba-8cde-305756952600)
  
