@@ -33,8 +33,6 @@ O ESP32 será programado para se conectar à internet via Wi-Fi, estabelecendo u
 Interface Web:
 A interface será projetada para enviar comandos ao ESP32, que controlará os motores do robô. Com uma interface gráfica intuitiva, o usuário poderá escolher direções (frente, ré, direita, esquerda) e ajustar a velocidade.
 
-Movimentação:
-Foco em uma programação eficiente dos motores, reduzindo consumo excessivo de energia. O sistema deve permitir modos de operação que otimizem a duração e uso da alimentação disponível.
 
 # Objetivo
 A interface com o usuário que permita:
