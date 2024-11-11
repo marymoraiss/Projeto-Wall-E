@@ -41,9 +41,10 @@ A interface com o usuário que permita:
 
 Ideias para Funcionalidades Extras, caso haja tempo adicional, considere implementar:
 - Movimentos padronizados acionados com um único comando.
-- Alto-falantes para simular sons e tornar o Wall-E mais interativo e expressivo.
+- Alto-falantes para simular sons e tornar o Wall-E mais interativo e expressivo
 
-Para ter acesso a mais informações, acesse Funcionamento.md
+Para ter mais informações acesse Funcionamento.md
+
 ---
 Professores Orientadores: Gabriel Wendel Santos da Silva, Luiz Alberto de Azevedo e Renan Augusto Starke
 Alunos: Maria A. de Morais e Raul D. Alves
