@@ -1,5 +1,3 @@
-# Concepção
-
 # Movimentação do Robô Wall-E
 A Internet das Coisas (IoT) oferece soluções inovadoras para integrar dispositivos à internet, gestão inteligente e eficiência energética. Este projeto pretende demonstrar o controle remoto de um robô, usando uma interface web para simular interações práticas entre a tecnologia IoT e o mundo físico.
 
