@@ -43,12 +43,6 @@ Ideias para Funcionalidades Extras, caso haja tempo adicional, considere impleme
 - Movimentos padronizados acionados com um único comando.
 - Alto-falantes para simular sons e tornar o Wall-E mais interativo e expressivo.
 
-# Lista dos principais materiais e ferramentas do projeto:
-- Carcaça do Wall-e impressa em 3D
-- ESP32
-- 8 Motores (2 de corrente contínua e 6 de passo)
-- Drivers de motores
-- Computador (para gerenciar o Wall-e)
-- Auto-falates caso haja tempo de implementar.
+
 
 
