@@ -45,6 +45,10 @@ Ideias para Funcionalidades Extras, caso haja tempo adicional, considere impleme
 
 Para ter acesso a mais informações, acesse https://github.com/marymoraiss/Projeto-Wall-E/blob/1ec701898300de11a69630d0a834f2c1889c54cc/Funcionamento.md
 
+---
+Professores Orientadores: Gabriel Wendel Santos da Silva, Luiz Alberto de Azevedo e Renan Augusto Starke
+Alunos: Maria A. de Morais e Raul D. Alves
+
 
 
 
