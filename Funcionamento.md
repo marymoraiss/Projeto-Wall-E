@@ -13,7 +13,7 @@ Quanto à alimentação do projeto, uma fonte será usada para desenvolvimento e
 # Lista dos principais materiais e ferramentas do projeto:
 - Carcaça do Wall-e impressa em 3D
 - ESP32
-- 8 Motores (2 de corrente contínua e 6 de passo)
-- Drivers de motores
+- 8 Servo motores
+- 2 Motores CC
 - Computador (para gerenciar o Wall-e)
 - Auto-falates caso haja tempo de implementar.
