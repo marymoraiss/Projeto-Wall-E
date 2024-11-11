@@ -43,6 +43,8 @@ Ideias para Funcionalidades Extras, caso haja tempo adicional, considere impleme
 - Movimentos padronizados acionados com um único comando.
 - Alto-falantes para simular sons e tornar o Wall-E mais interativo e expressivo.
 
+Para ter acesso a mais informações, acesse Funcionamento.md
+
 
 
 
