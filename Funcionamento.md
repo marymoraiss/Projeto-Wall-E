@@ -81,7 +81,8 @@ Será usado um circuito para limitar a corrente dos motores DC, e um para os mot
 
 Para limitar a corrente, será usado um circuito limitador de corrente com o LM317. É um circuito bastante conhecido e disponível, inclusive, nos datasheets desse componente. Veja a imagem abaixo:
 
-![Limitador de corrente](img/limitador-corrente.png)
+![image](https://github.com/user-attachments/assets/2b1d2f63-81f0-430b-ac0e-968687dcacce)
+
 
 Fonte: datasheet LM317, Texas Instruments
 
@@ -108,7 +109,8 @@ Para movimentar o Wall-e, será necessário, além de controlar a largura de pul
 
 A conexão padrão desse componente está ilustrada abaixo:
 
-![Pinagem da ponte H](img/ponte-h-pinagem.png)
+![image](https://github.com/user-attachments/assets/38477193-471d-492d-bfa8-3df5bf1fcf74)
+
 
 Fonte: [Makehero - Motor DC com Driver Ponte H L298N](https://www.makerhero.com/blog/motor-dc-arduino-ponte-h-l298n/)
 
