@@ -18,7 +18,7 @@ Quanto à alimentação do projeto, uma fonte será usada para desenvolvimento e
 - Computador (para gerenciar o Wall-e)
 - Auto-falates caso haja tempo de implementar.
 
-# Movimentação do Wall-e no modo teleoperado
+# Movimentação do Wall-e
 
 No modo teleoperado, a movimentação do Wall-e será definida exclusivamente pelo operador (pessoa que controla o Wall-e). Ou seja, não há nenhum código controlando a movimentação do Wall-e de forma automática.
 
