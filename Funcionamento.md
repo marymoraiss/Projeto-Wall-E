@@ -23,16 +23,11 @@ Quanto à alimentação do projeto, uma fonte será usada para desenvolvimento e
 No modo teleoperado, a movimentação do Wall-e será definida exclusivamente pelo operador (pessoa que controla o Wall-e). Ou seja, não há nenhum código controlando a movimentação do Wall-e de forma automática.
 
 
-## Motores
+## Motor CC
 
-O controle da velocidade dos motores será feito por meio de um PWM em software usando as GPIO da Raspberry Pi.
+O controle da velocidade dos motores será feito por meio de um PWM em software usando ESP32.
 
 O duty cycle do PWM definirá a velocidade com que o Wall-e se movimentará e a forma como ele realizará as curvas. O eixo das rodas do Wall-e são fixos e não podem ser direcionados. Ou seja, não é possível que o Wall-e faça uma curva rotacionando suas rodas. Para girar o Wall-e, será necessário alterar a velocidade com que os motores das rodas giram. Girar a roda da esquerda mais rápido fará o Wall-e virar para a direita e vice-versa.
-
-Já os motores de passo usados para mover os braços e cabeça do Wall-e, são controlados por meio da largura de pulso do PWM aplicado no terminal de controle. Também serão controlados usando os PWM em software da Raspberry Pi. Serão controlados apenas 3 dos 6 motores de passo. Os motores dos braços e do pescoço. Os movimentos dessas partes serão usados para notificar a identificação de lixo, como proposto na página ['Movimentação do Wall-e no modo autônomo'](autonomo.md).
-
-Dependendo da exigência de processamento e comunicação da Raspberry Pi, ela pode não conseguir controlar o PWM do motor adequadamente. Assim, pode ser necessário terceirizar esse trabalho para um microcontrolador. Nessa situação, será usado uma esp32 para controlar os motores DC e de passo, enquanto a Raspberry Pi será responsável apenas pelo streaming de vídeo e enviar os comando para o esp32 por meio do wifi.
-
 
 ### Cinemática
 
@@ -144,24 +139,12 @@ Há uma proteção interna de chaveamento que impede o curto-circuito da ponte H
 
 Os limitadores de corrente dos motores DC serão postos na alimentação do driver ponte H.
 
-
-### Conversores de nível lógico
-
-Como as saídas da Raspberry Pi são de 3.3V, é necessário usar um conversor de nível lógico para acionar circuitos digitais de 5V. O driver ponte H, assim como os motores de passo são acionados em 5V.
-
-São necessárias 4 conexões digitais para a ponte H e 3 para o motor de passo. Assim, são necessárias 7 conexões no total. Cada conversor pode converter até 4 sinais digitais. Portanto, são necessários 2 conversores no total.
-
-![Conversores lógicos](img/conversor-logico.png)
-
-
+VERRRRRRRR
 ### Código para controlar os motores
 
-O código será escrito em Python usando o módulo RPi.GPIO. Os PWM desse módulo são todos implementados em software (ainda não possuem suporte a PWM em hardware).
-
-Em caso de o desempenho dessa implementação não for decente o bastante, os motores serão controlados usando um esp32 e a Raspberry Pi será responsável apenas pelo Streaming de vídeo. Isso alivia o trabalho sobre a Raspberry Pi.
+O código será escrito em C++. Os PWM desse módulo são todos implementados em software (ainda não possuem suporte a PWM em hardware).
 
 Para o controle dos motores de passo, seu ângulo será variado lentamente. Evitar mudanças bruscas no ângulo do motor evita um consumo muito grande de correte por partes dele. Como informado anteriormente, esses motores podem possuir altas correntes se aplicado uma carga.
-
 
 ---
 Anterior: [Comunicação do usuário com o Wall-e](comunicacao.md) | Topo: [Desenvolvimento](README.md) | Próximo: [Movimentação do Wall-e no modo autônomo](autonomo.md)
