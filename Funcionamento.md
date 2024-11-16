@@ -18,9 +18,9 @@ Quanto à alimentação do projeto, uma fonte será usada para desenvolvimento e
 - Computador (para gerenciar o Wall-e)
 - Auto-falates caso haja tempo de implementar.
 
-# Motor de passo
+# Servo Motor
 
-O motor de passo utilizado é o SG90. É um motor de passo genérico bastante usado em projetos com microcontroladores devido a sua simplicidade. As suas especificações são o seguinte:
+O servo motor utilizado é o SG90. É um motor de passo genérico bastante usado em projetos com microcontroladores devido a sua simplicidade. As suas especificações são o seguinte:
 
 |      Especificação      |                Valor                |
 |          :---:          |                :---:                |
@@ -34,7 +34,7 @@ O motor de passo utilizado é o SG90. É um motor de passo genérico bastante us
 
 Adaptado de: [Eletrogate - Micro Servo 9g SG90](https://www.eletrogate.com/micro-servo-9g-sg90-towerpro)
 
-O controle do ângulo do motor de passo é feito por um sinal PWM. Ele deve ser um período fixo de 20ms (50Hz). A largura de pulso define o ângulo do motor. Para 1ms de largura de pulso, o ângulo correspondente do motor de passo é de 0º. Para 2ms de largura de pulso, o ângulo é de 180º. Essa relação entre largura de pulso e ângulo é linear. Portanto, pode ser definida pela seguinte equação.
+O ângulo do motor de passo é controlado por um sinal PWM com um período fixo de 20 ms (50 Hz). A largura do pulso determina o ângulo do motor. Quando a largura do pulso é de 1 ms, o ângulo correspondente é 0°. Já para uma largura de pulso de 2 ms, o ângulo é 180°. Essa relação entre a largura do pulso e o ângulo é linear e pode ser expressa pela seguinte equação:
 
 $$\theta (t) = (t - 1ms) \cdot {180º \over 1ms}$$
 
@@ -45,4 +45,4 @@ $$\theta (t) = (t - 1ms) \cdot {180º \over 1ms}$$
 - Marrom: referência (GND)
 - Laranja: Sinal de controle (PWM de 0 a 5V)
 
-Como é necessário apenas um conector para controle, será necessário apenas um GPIO da Raspberry Pi para controlá-lo. O controle deve ser um sinal digital de 0 a 5V, portanto, será necessário converter o sinal da Raspberry Pi (3,3V).
+Como é necessário apenas um conector para controle, será utilizado apenas um GPIO do ESP32 para realizar essa tarefa. O controle exige um sinal digital de 0 a 5V; assim, será necessário implementar um circuito de conversão de nível lógico para ajustar o sinal do ESP32 (3,3V) para 5V.
