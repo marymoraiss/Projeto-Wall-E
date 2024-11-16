@@ -169,6 +169,8 @@ O ângulo do motor de passo é controlado por um sinal PWM com um período fixo 
 
 $$\theta (t) = (t - 1ms) \cdot {180º \over 1ms}$$
 
+![image](https://github.com/user-attachments/assets/beba083e-6427-4b54-8bd2-a5cc3a48c6a9)
+
 
 ## Conectores
 
