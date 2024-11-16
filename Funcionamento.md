@@ -59,7 +59,8 @@ $$\omega = {{\varphi_d \cdot r \over 2L} - {\varphi_e \cdot r \over 2L}}$$
 
 L é o raio do robô móvel (do centro até a roda), conforme a imagem abaixo:
 
-![Robo móvel](img/robo-movel.png)
+![image](https://github.com/user-attachments/assets/cffd3848-c2e6-42a9-accb-a71a9c55cbc2)
+
 
 Fonte: [Elvira Rafikova - Módulo Mobilidade](https://classes.elvirarafikova.com/rma/mobilidade/)
 
