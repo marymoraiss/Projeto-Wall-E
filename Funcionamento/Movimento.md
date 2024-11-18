@@ -2,6 +2,8 @@
 Um diagrama funcional inicial do projeto foi elaborado, considerando os objetivos. Veja a figura abaixo. O usuário será uma pessoa controlando o robô a partir da interface web criada. 
 ![WhatsApp Image 2024-11-11 at 12 47 36](https://github.com/user-attachments/assets/e17f760a-ab92-4c37-a424-87a76b249d5c)
 
+Fonte: Autoria própria.
+
 A interface gráfica do usuário será desenvolvida em Python (linguagem interpretada de alto nível) ou com qualquer ferramenta simples e bem documentada para criação de interfaces gráficas. 
 
 A comunicação entre o usuário e o Wall-e será realizada via HTTP (rede). O protocolo HTTP (Hypertext Transfer Protocol) é usado para comunicação na web. Ele define como as mensagens são transmitidas e formatadas entre clientes (como navegadores) e servidores. O cliente faz uma solicitação (request) a um servidor, e o servidor responde (response) com dados, como uma página da web. HTTP é um protocolo sem estado, o que significa que cada troca é independente e não mantém informações.
@@ -151,7 +153,7 @@ Para o controle dos motores de passo, seu ângulo será variado lentamente. Evit
 
 ![Captura de tela de 2024-11-18 12-16-22](https://github.com/user-attachments/assets/7628694d-b6b0-4a45-939e-0285f94bc38c)
 
-Fonte: "Autoria própria."
+Fonte: Autoria própria.
 _ _ _
 
 # Servo Motor
@@ -176,6 +178,7 @@ $$\theta (t) = (t - 1ms) \cdot {180º \over 1ms}$$
 
 ![image](https://github.com/user-attachments/assets/beba083e-6427-4b54-8bd2-a5cc3a48c6a9)
 
+Fonte: Autoria própria.
 
 ## Conectores
 
