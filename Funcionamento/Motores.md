@@ -103,7 +103,7 @@ Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/bl
 
 Para identificar o consumo máximo de corrente com carga, é necessário segurar o motor para que ele tenha que se esforçar ao máximo, assim simulando um possível travamento.
 
-![image](https://github.com/user-attachments/assets/e9356f2f-5c93-4098-9de2-83810a530962)
+![image](https://github.com/user-attachments/assets/ec341e93-b213-47b0-88cf-5ead1e6791fd)
 
 
 Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
