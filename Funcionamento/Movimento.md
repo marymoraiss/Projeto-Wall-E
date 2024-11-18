@@ -1,4 +1,4 @@
-# Diagrama de blocos para implementação do projeto:
+# Diagrama para implementação do projeto:
 Um diagrama funcional inicial do projeto foi elaborado, considerando os objetivos. Veja a figura abaixo. O usuário será uma pessoa controlando o robô a partir da interface web criada. 
 ![WhatsApp Image 2024-11-11 at 12 47 36](https://github.com/user-attachments/assets/e17f760a-ab92-4c37-a424-87a76b249d5c)
 
