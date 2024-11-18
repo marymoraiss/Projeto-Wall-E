@@ -61,7 +61,7 @@ Os testes para a validação do funcionamento dos motores, foram divididos em al
 
 #### Identificando o Funcionamento do Motor:
 
-![image](https://github.com/user-attachments/assets/b1b5176b-1679-4c7a-888c-0a432de2f99a)
+![image](https://github.com/user-attachments/assets/ab7dcc7e-a561-46ba-ae5e-7015f4352a24)
 
 
 Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
@@ -71,13 +71,17 @@ Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/bl
 
 Para o consumo de corrente do motor sem carga, foi utilizado uma fonte de bancada com corrente controlada, e assim foi possível identificá-la:
 
-![N|Walle](img/teste_sem_carga_motordc.jpeg)
+![image](https://github.com/user-attachments/assets/ad802188-a63a-4c2c-a2a8-760c50052507)
 
-Fonte: Autoria Própria
+
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
+
 
 Para identificar o consumo máximo de corrente com carga, é necessário segurar o motor para que ele tenha que se esforçar ao máximo, assim simulando um possível travamento das rodas.
 
-![N|Walle](img/teste_carga_motordc.jpeg)
+![Uploading image.png…]()
+
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 Os resultados podem ser observados na tabela abaixo:
 
