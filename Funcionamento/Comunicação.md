@@ -20,3 +20,22 @@ A interface web no navegador faz requisições HTTP (via um endereço IP) para o
 ![‘](https://github.com/user-attachments/assets/523d2ef2-c862-43a9-a1d5-8c1aeb8f112d)
 
 Fonte: Autoria Propria
+
+---
+
+# Fluxo de comunicação entre a interface web e o ESP32
+Caso 1: ESP32 como servidor HTTP
+Interface web envia uma requisição:
+
+O navegador ou aplicativo web (rodando em um dispositivo cliente) faz uma requisição HTTP para o ESP32.
+Isso geralmente é feito através de uma URL, como http://<ip-do-esp32>/endpoint.
+ESP32 processa a requisição:
+
+Um framework como o ESPAsyncWebServer ou a biblioteca WebServer no Arduino IDE pode ser usado para gerenciar as requisições.
+O ESP32 interpreta o método (GET, POST, etc.), os parâmetros da URL ou o corpo da requisição.
+Resposta do ESP32:
+
+O ESP32 envia uma resposta HTTP ao cliente, contendo um código de status (200, 404, etc.) e dados no formato adequado (geralmente texto, HTML ou JSON).
+Interface web atualiza os dados:
+
+A interface web exibe os dados recebidos ou reflete alterações baseadas na resposta do ESP32
