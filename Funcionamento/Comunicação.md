@@ -12,7 +12,6 @@ Servidor HTTP no ESP32:
 O ESP32 configura um ponto de acesso (Access Point) ou conecta-se a uma rede Wi-Fi existente.
 Ele executa um servidor HTTP que pode lidar com requisições do tipo GET, POST ou outros métodos.
 A interface web no navegador faz requisições HTTP (via um endereço IP) para o ESP32, que responde com dados ou realiza ações baseadas na requisição.
-**Cliente
 
 ---
 
