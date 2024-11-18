@@ -153,12 +153,6 @@ Há uma proteção interna de chaveamento que impede o curto-circuito da ponte H
 
 Os limitadores de corrente dos motores DC serão postos na alimentação do driver ponte H.
 
-### Código para controlar os motores
-
-O código será escrito em C++. Os PWM desse módulo são todos implementados em software (ainda não possuem suporte a PWM em hardware).
-
-Para o controle dos motores de passo, seu ângulo será variado lentamente. Evitar mudanças bruscas no ângulo do motor evita um consumo muito grande de correte por partes dele. Como informado anteriormente, esses motores podem possuir altas correntes se aplicado uma carga.
-
 ![Captura de tela de 2024-11-18 12-16-22](https://github.com/user-attachments/assets/7628694d-b6b0-4a45-939e-0285f94bc38c)
 
 Fonte: Autoria própria.
