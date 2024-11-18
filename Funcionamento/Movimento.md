@@ -149,8 +149,7 @@ O código será escrito em C++. Os PWM desse módulo são todos implementados em
 
 Para o controle dos motores de passo, seu ângulo será variado lentamente. Evitar mudanças bruscas no ângulo do motor evita um consumo muito grande de correte por partes dele. Como informado anteriormente, esses motores podem possuir altas correntes se aplicado uma carga.
 
----
-Anterior: [Comunicação do usuário com o Wall-e](comunicacao.md) | Topo: [Desenvolvimento](README.md) 
+_ _ _
 
 # Servo Motor
 
