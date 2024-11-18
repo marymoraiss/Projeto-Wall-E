@@ -65,9 +65,10 @@ Os dois motores utilizados para as movimentar o Wall-e, são motores de corrente
 
 Os outros 6 motores contidos no Wall-e servem para funções secundárias como: Mexer braço e virar cabeça. Estes por sua vez são feitos com servos motores SG90.
 
-![Walle](img/micro_servo_motor.jpg)
+![image](https://github.com/user-attachments/assets/95c43641-1b9a-41bc-906e-73e05664bd60)
 
-Fonte: Autoria Própria
+
+Fonte: [Autoria Própria](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 ## Testes e Validações
 
