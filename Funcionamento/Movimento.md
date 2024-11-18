@@ -26,6 +26,15 @@ Quanto à alimentação do projeto, uma fonte será usada para desenvolvimento e
 No modo teleoperado, a movimentação do Wall-e será definida exclusivamente pelo operador (pessoa que controla o Wall-e). Ou seja, não há nenhum código controlando a movimentação do Wall-e de forma automática.
 
 
+## ESP32
+
+O ESP32 é um microcontrolador poderoso e versátil, desenvolvido pela Espressif Systems. Ele integra conectividade Wi-Fi e Bluetooth, sendo ideal para projetos IoT. Possui um processador dual-core, memória flash, GPIOs configuráveis, além de suporte a diversos protocolos. É amplamente utilizado devido ao baixo custo, eficiência energética e facilidade de programação, especialmente com plataformas como Arduino e MicroPython.
+
+![image](https://github.com/user-attachments/assets/f4dd7293-6a00-4130-bf97-b2651627d773)
+
+Fonte: ![image](https://github.com/user-attachments/assets/b07f86c4-54ba-4007-a9c0-4af5ce532229)
+
+
 ## Motor CC
 
 O controle da velocidade dos motores será feito por meio de um PWM em software usando ESP32.
