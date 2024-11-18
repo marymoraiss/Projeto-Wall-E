@@ -32,8 +32,7 @@ O ESP32 é um microcontrolador poderoso e versátil, desenvolvido pela Espressif
 
 ![image](https://github.com/user-attachments/assets/f4dd7293-6a00-4130-bf97-b2651627d773)
 
-Fonte: ![image](https://github.com/user-attachments/assets/b07f86c4-54ba-4007-a9c0-4af5ce532229)
-
+Fonte:https://portal.vidadesilicio.com.br/conhecendo-o-esp32/ 
 
 ## Motor CC
 
