@@ -15,3 +15,8 @@ A interface web no navegador faz requisições HTTP (via um endereço IP) para o
 
 ---
 
+# Interface Web
+
+![‘](https://github.com/user-attachments/assets/523d2ef2-c862-43a9-a1d5-8c1aeb8f112d)
+
+Fonte: Autoria Propria
