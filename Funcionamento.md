@@ -54,8 +54,6 @@ Para iniciarmos os projetos de movimentação do Wall-e, devemos validar o funci
 
 * Motores
 * Drivers de acionamento
-* Baterias
-
 
 ## Modelos dos motores
 
