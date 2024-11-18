@@ -86,7 +86,7 @@ Os testes para a validação do funcionamento dos motores, foram divididos em al
 ![image](https://github.com/user-attachments/assets/b1b5176b-1679-4c7a-888c-0a432de2f99a)
 
 
-Fonte: [Autoria Própria](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 
 #### Verificar o Consumo de Corrente Sem/Com Carga:
@@ -117,13 +117,13 @@ Para o consumo de corrente do servo motor sem carga, foi utilizado um arduino e 
 
 ![N|Walle](img/teste_sem_carga_servomotor.jpeg)
 
-Fonte: Autoria Própria
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 Para identificar o consumo máximo de corrente com carga, é necessário segurar o motor para que ele tenha que se esforçar ao máximo, assim simulando um possível travamento.
 
 ![N|Walle](img/teste_carga_servomotor.jpeg)
 
-Fonte: Autoria Própria
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 Os resultados de corrente para o motor de passo está na tabela abaixo:
 
@@ -144,7 +144,7 @@ Para os motores DC será utilizado um módulo driver motor ponte H baseado no ch
 
 ![N|Walle](img/ponte_h.png)
 
-Fonte: Autoria Própria
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 Para os Servo Motores será utilizado o driver da biblioteca do arduino para o acionamento de controle dos motores.
   * https://www.arduino.cc/reference/en/libraries/servo/
@@ -159,21 +159,19 @@ Os testes de validações de drivers, foram feitos a partir dos drivers citados 
 
 ![N|Walle](img/teste_driver_ponteh.jpeg)
 
-Fonte: Autoria Própria
+
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 
 #### Teste Driver Servo Motor usando Biblioteca Servo.h.
 
 ![N|Walle](img/teste_driver_servomotor.png)
 
-Fonte: Autoria Própria
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 
 Após as validações dos drivers e com os resultados obtidos de consumo de corrente dos motores, pode-se iniciar o processo de analise de consumo total de energia do circuito, para a construção dos módulos de bateria que serão utilizados.
 
-
----
-Anterior: [Bateria](bateria.md) | Topo: [Desenvolvimento](README.md)
 
 # Movimentação do Wall-e
 
