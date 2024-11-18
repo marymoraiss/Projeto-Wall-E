@@ -66,7 +66,7 @@ Os outros 6 motores contidos no Wall-e servem para funções secundárias como: 
 ![image](https://github.com/user-attachments/assets/95c43641-1b9a-41bc-906e-73e05664bd60)
 
 
-Fonte: [Autoria Própria](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
+Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 ## Testes e Validações
 
