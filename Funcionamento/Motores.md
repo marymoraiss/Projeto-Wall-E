@@ -79,7 +79,7 @@ Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/bl
 
 Para identificar o consumo máximo de corrente com carga, é necessário segurar o motor para que ele tenha que se esforçar ao máximo, assim simulando um possível travamento das rodas.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/ea04a9ed-4bb8-432d-82a6-707a740bf4c1)
 
 Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
@@ -97,13 +97,14 @@ Os resultados podem ser observados na tabela abaixo:
 
 Para o consumo de corrente do servo motor sem carga, foi utilizado um arduino e a propria biblioteca do servo motor disponibilizada no site oficial, e assim foi possível identificá-la:
 
-![N|Walle](img/teste_sem_carga_servomotor.jpeg)
+![image](https://github.com/user-attachments/assets/6c3e06d3-0ca2-4818-b0df-11ab51fe9039)
 
 Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
 Para identificar o consumo máximo de corrente com carga, é necessário segurar o motor para que ele tenha que se esforçar ao máximo, assim simulando um possível travamento.
 
-![N|Walle](img/teste_carga_servomotor.jpeg)
+![image](https://github.com/user-attachments/assets/e9356f2f-5c93-4098-9de2-83810a530962)
+
 
 Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
@@ -124,7 +125,7 @@ Portanto, foi pesando em utilizar os seguintes drivers:
 
 Para os motores DC será utilizado um módulo driver motor ponte H baseado no chip L298N.
 
-![N|Walle](img/ponte_h.png)
+![image](https://github.com/user-attachments/assets/48614b1e-409e-443a-8b55-a1e73e981ded)
 
 Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
 
@@ -136,20 +137,3 @@ Para os Servo Motores será utilizado o driver da biblioteca do arduino para o a
 
 Os testes de validações de drivers, foram feitos a partir dos drivers citados acima.
 
-
-#### Teste Driver Motor DC c/ L298N
-
-![N|Walle](img/teste_driver_ponteh.jpeg)
-
-
-Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
-
-
-#### Teste Driver Servo Motor usando Biblioteca Servo.h.
-
-![N|Walle](img/teste_driver_servomotor.png)
-
-Fonte: [Equipe Lucas e Lucas](https://github.com/MatheusPinto/PI_IFSC_2023_02/blob/main/equipe_LuLu/design/validacao-motores.md)
-
-
-Após as validações dos drivers e com os resultados obtidos de consumo de corrente dos motores, pode-se iniciar o processo de analise de consumo total de energia do circuito, para a construção dos módulos de bateria que serão utilizados.
