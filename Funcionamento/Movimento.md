@@ -87,7 +87,7 @@ Para limitar a corrente, será usado um circuito limitador de corrente com o LM3
 
 Fonte: datasheet LM317, Texas Instruments
 
-A corrente de consumo dos motores é parâmetro medido e validado em laboratório. Os dados relacionados estão disponíveis na página ['Motores'](validacao-motores.md).
+A corrente de consumo dos motores é parâmetro medido e validado em laboratório. Os dados relacionados estão disponíveis na página ['Motores'](Funcionamento/Motores.mdd).
 
 A corrente DC dos motores está na faixa de 170mA sem carga. Com carga está em 580mA. Como o Wall-e é leve e a lixeira acoplada será pequena, não será carregado muito peso. Assim, será considerado, inicialmente, uma corrente média de 300mA para cada motor. Esse valor será ajustado futuramente se o Wall-e necessitar de mais corrente. Por enquanto, será usado apenas para dimensionar o limitar de corrente.
 
