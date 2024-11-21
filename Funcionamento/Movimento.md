@@ -83,37 +83,6 @@ Com as equações de velocidade linear e ângular do robô em função do duty c
 
 $$\begin{cases} p_d + p_e = {2V \over V_{max}} \\\\ p_d - p_e = {2 \omega L \over V_{max}}\end{cases}$$
 
-
-### Limitadores de corrente
-
-Existe a possibilidade dos motores (tanto DC quanto de passo) travarem durante sua operação. Nessas condições, o consumo de corrente deles aumenta bastante. Para proteger a bateria nessas situações, deve-se limitar a correntes dos motores.
-
-Será usado um circuito para limitar a corrente dos motores DC, e um para os motores de passo. É importante limitar eles de forma individual. Assim, se um dos motores travar e o limitador atuar, apenas o limitador associado a esse motor será acionado. Isso quer dizer que, se o motor de passo travar, o limitador do motor DC não será acionado e ele continua a operar normalmente.
-
-Para limitar a corrente, será usado um circuito limitador de corrente com o LM317. É um circuito bastante conhecido e disponível, inclusive, nos datasheets desse componente. Veja a imagem abaixo:
-
-![image](https://github.com/user-attachments/assets/2b1d2f63-81f0-430b-ac0e-968687dcacce)
-
-
-Fonte: datasheet LM317, Texas Instruments
-
-A corrente de consumo dos motores é parâmetro medido e validado em laboratório. Os dados relacionados estão disponíveis na página ['Motores'](Funcionamento/Motores.mdd).
-
-A corrente DC dos motores está na faixa de 170mA sem carga. Com carga está em 580mA. Como o Wall-e é leve e a lixeira acoplada será pequena, não será carregado muito peso. Assim, será considerado, inicialmente, uma corrente média de 300mA para cada motor. Esse valor será ajustado futuramente se o Wall-e necessitar de mais corrente. Por enquanto, será usado apenas para dimensionar o limitar de corrente.
-
-Inicialmente, a corrente do motor DC será limitada em 300mA por cada motor. No total, 600mA. A resistência necessária para limitar a corrente será de:
-
-$$I={{1,2V} \over R} \Rightarrow R={{1,2V} \over I} = {{1,2V} \over 600mA} = 2 \Omega$$
-
-A potência mínima do resistor será de:
-
-$$P = V \cdot I = 1.2V \cdot 600mA = 0,72W$$
-
-Por segurança, será usado um resistor de no mínimo 1,5W.
-
-Quanto a limitação de corrente dos motores de passo, eles consomem pouca corrente quando estão parados (na faixa dos 10mA). Ao mover, o consumo de corrente aumenta bastante, podendo chegar a mais de 1A caso um desses motores trave. Inicialmente, serão limitados em 600mA no total (todos os motores juntos). Dessa forma, pode-se usar um resistor igual ao do motor DC para os de passo. Futuramente, talvez esse valor deva ser ajustado.
-
-
 ### Driver ponte H
 
 Para movimentar o Wall-e, será necessário, além de controlar a largura de pulso do PWM, controlar o sentido dos motores DC. Será usado um drive ponte H L298N. Ele permite inverter o sentido de rotação do motor invertendo o sentido da corrente que passa por ele.
