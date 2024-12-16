@@ -1,3 +1,4 @@
+```
 #include <WiFi.h>
 
 // Configuração do Wi-Fi
@@ -122,3 +123,4 @@ void loop() {
     Serial.println("Cliente Desconectado.");
   }
 }
+```
