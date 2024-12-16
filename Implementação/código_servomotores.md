@@ -1,4 +1,4 @@
-```
+```c
 #include <ESP32Servo.h>
 
 //criacao dos servos
