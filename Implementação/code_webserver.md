@@ -1,4 +1,4 @@
-```
+```c
 #include <WiFi.h>
 
 // Configuração do Wi-Fi
