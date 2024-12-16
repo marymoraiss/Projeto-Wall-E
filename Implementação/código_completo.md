@@ -1,3 +1,4 @@
+```c
 #include <WiFi.h>
 
 //biblioteca servos motores
@@ -193,3 +194,4 @@ void loop() {
     Serial.println("Cliente Desconectado.");
   }
 }
+```
