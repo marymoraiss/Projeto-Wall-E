@@ -112,7 +112,7 @@ Cada URL acessada pelo navegador executa uma ação específica no robô:
 ---
 
 # Controle de Motores e Servos
-- # Controle de Motores DC 
+Controle de Motores DC 
 ```
 digitalWrite(motorEPin1, HIGH);
 digitalWrite(motorEPin2, LOW);
@@ -121,7 +121,7 @@ ledcWrite(pwmChanne0, dutyCycle); // Ajusta a velocidade
 - Define a direção do motor (frente ou ré) ajustando os pinos IN1 e IN2.
 - Controla a velocidade usando PWM no pino enablePin.
 
-- # Controle de Servos (EXEMPLO POIS AINDA VAI SERTESTADO)
+Controle de Servos (EXEMPLO POIS AINDA VAI SERTESTADO)
 ```
 servo_pescocoi.write(90); // Ajusta o ângulo do pescoço
 delay(1000);
@@ -130,7 +130,7 @@ delay(1000);
 ---
 
 # Loop Principal (loop())
-- Estrutura de Controle
+Estrutura de Controle
 ```
 void loop() {
   WiFiClient client = server.available();
