@@ -1,5 +1,46 @@
-```c
+```
 #include <WiFi.h>
+
+//biblioteca servos motores
+#include <ESP32Servo.h>
+
+//criacao dos servos
+Servo servo_olhoe;
+Servo servo_olhod;
+
+Servo servo_pescocos;
+Servo servo_pescocom;
+Servo servo_pescocoi;
+
+Servo servo_bracoe;
+Servo servo_bracod;
+
+#define pin_olhoe 10
+#define pin_olhod 11
+
+#define pin_pescocos 12
+#define pin_pescocom 13
+#define pin_pescocoi 14
+
+#define pin_bracoe 15
+#define pin_bracod 16
+
+// Motor ESQUERDO
+#define motorEPin1 39 // Pino IN1 
+#define motorEPin2 41 // Pino IN2 
+#define enableEPin 40 // Pino PWM 
+
+// Motor DIREITO
+#define motorDPin1 38 // Pino IN1  
+#define motorDPin2 35 // Pino IN2 
+#define enableDPin 34 // Pino PWM
+
+// PWM properties dc
+const int freq = 30000; // Frequência do PWM (30 kHz)
+const int resolution = 8; // Resolução de 8 bits (valores de 0 a 255)
+int dutyCycle = 200; // Ciclo de trabalho inicial (velocidade)
+const int pwmChanne0 = 0;
+const int pwmChannel = 1;
 
 // Configuração do Wi-Fi
 const char* ssid = "Maria";
@@ -7,9 +48,34 @@ const char* password = "marylinda";
 
 WiFiServer server(80);
 
+// Pinos para as ações
+int LED = 2; // Apenas como exemplo, você pode substituir pelos pinos que controlam os olhos, braços, etc.
+
 void setup() {
   Serial.begin(115200);
   pinMode(LED, OUTPUT);
+
+  //pinos dos servos
+  servo_olhoe.attach(pin_olhoe);
+  servo_olhod.attach(pin_olhod);
+  servo_pescocos.attach(pin_pescocos);
+  servo_pescocom.attach(pin_pescocom);
+  servo_pescocoi.attach(pin_pescocoi);
+  servo_bracoe.attach(pin_bracoe);
+  servo_bracod.attach(pin_bracod);
+
+  //pinos dc
+  pinMode(motorEPin1, OUTPUT);
+  pinMode(motorEPin2, OUTPUT);
+  pinMode(motorDPin1, OUTPUT);
+  pinMode(motorDPin2, OUTPUT);
+
+  // Configuração dos canais PWM
+  ledcAttachChannel(enableEPin, freq, resolution, pwmChanne0); //pwm motor dc e
+  ledcAttachChannel(enableDPin, freq, resolution, pwmChannel); //pwm motor dc d
+
+  Serial.begin(115200);
+  Serial.println("Testando Motores E e D...");
 
   Serial.println();
   Serial.print("Conectando-se a ");
@@ -100,6 +166,11 @@ void loop() {
         if (currentLine.endsWith("GET /pescoco")) {
           Serial.println("Acao: ativa Pescoco");
           // Adicione aqui a lógica para "Ação Pescoço"
+          servo_pescocoi.write(90);
+          delay(1000);
+          //servo_pescocom.write(90);
+          //delay(1000);
+
         }
         if (currentLine.endsWith("GET /cima")) {
           Serial.println("Movimento: Para Cima");
