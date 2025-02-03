@@ -47,6 +47,16 @@ const char* password = "marylinda";
 
 WiFiServer server(80);
 
+// Conecta ao Wi-Fi com o SSID e senha
+Serial.print("Setting AP (Access Point)…");
+WiFi.softAP(ssid, password);
+
+IPAddress IP = WiFi.softAPIP();
+Serial.print("AP IP address: ");
+Serial.println(IP);
+
+server.begin();
+
 // Pinos para as ações
 int LED = 2; // Apenas como exemplo, você pode substituir pelos pinos que controlam os olhos, braços, etc.
 
