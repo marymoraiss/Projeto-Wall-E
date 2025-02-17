@@ -1,0 +1,23 @@
+
+# Objetivo Alcançados 
+
+- Gerenciar o funcionamento dos motores.
+- Operar o robô Wall-E remotamente via comunicação Wi-Fi.
+- Controlar a direção do robô.
+- Ajustar a movimentação dos braços e da cabeça de Wall-E.
+- Interface Web
+- Movimentos padronizados acionados com um único comando.
+
+Para ter mais informações acesse [Funcionamento](Funcionamento.md)
+
+---
+Professores Orientadores: Gabriel Wendel Santos da Silva, Luiz Alberto de Azevedo e Renan Augusto Starke
+Alunos: Maria A. de Morais e Raul D. Alves
+
+# Fotos e Videos
+
+- Interface web
+![Imagem do WhatsApp de 2025-02-17 à(s) 11 19 34_86ec98fe](https://github.com/user-attachments/assets/cedb1dd9-7e36-4868-bdb4-3d8cf24d99a9)
+
+
+
