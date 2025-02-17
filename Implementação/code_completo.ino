@@ -1,9 +1,16 @@
 #include <WiFi.h>
-
-//biblioteca servos motores
 #include <ESP32Servo.h>
 
-//criacao dos servos
+// Definição do SSID e senha do ponto de acesso
+const char* ssid = "ESP32_AP";  // Nome da rede Wi-Fi
+const char* password = "12345678"; // Senha da rede
+
+WiFiServer sv(80); //Cria um servidor na porta 80
+
+// Variavel para guardar o HTTP 
+String header;
+
+// Definição dos servos motores
 Servo servo_olhoe;
 Servo servo_olhod;
 
@@ -14,7 +21,7 @@ Servo servo_pescocoi;
 Servo servo_bracoe;
 Servo servo_bracod;
 
-#define pin_olhoe 10
+#define pin_olhoe 2
 #define pin_olhod 11
 
 #define pin_pescocos 12
@@ -24,47 +31,37 @@ Servo servo_bracod;
 #define pin_bracoe 15
 #define pin_bracod 16
 
-// Motor ESQUERDO
-#define motorEPin1 39 // Pino IN1 
-#define motorEPin2 41 // Pino IN2 
-#define enableEPin 40 // Pino PWM 
+// Motor A
+#define PINO_IN1 2
+#define PINO_IN2 4 
 
-// Motor DIREITO
-#define motorDPin1 38 // Pino IN1  
-#define motorDPin2 35 // Pino IN2 
-#define enableDPin 34 // Pino PWM
-
-// PWM properties dc
-const int freq = 30000; // Frequência do PWM (30 kHz)
-const int resolution = 8; // Resolução de 8 bits (valores de 0 a 255)
-int dutyCycle = 200; // Ciclo de trabalho inicial (velocidade)
-const int pwmChanne0 = 0;
-const int pwmChannel = 1;
-
-// Configuração do Wi-Fi
-const char* ssid = "Maria";
-const char* password = "marylinda";
-
-WiFiServer server(80);
-
-// Conecta ao Wi-Fi com o SSID e senha
-Serial.print("Setting AP (Access Point)…");
-WiFi.softAP(ssid, password);
-
-IPAddress IP = WiFi.softAPIP();
-Serial.print("AP IP address: ");
-Serial.println(IP);
-
-server.begin();
-
-// Pinos para as ações
-int LED = 2; // Apenas como exemplo, você pode substituir pelos pinos que controlam os olhos, braços, etc.
+//Motor B
+#define PINO_IN3 5
+#define PINO_IN4 18 
 
 void setup() {
   Serial.begin(115200);
-  pinMode(LED, OUTPUT);
 
-  //pinos dos servos
+  // Configura os pinos de controle como saída
+  pinMode(PINO_IN1, OUTPUT);  // Define o pino IN1 como saída
+  pinMode(PINO_IN2, OUTPUT);  // Define o pino IN2 como saída
+  pinMode(PINO_IN3, OUTPUT);  // Define o pino IN3 como saída
+  pinMode(PINO_IN4, OUTPUT);  // Define o pino IN4 como saída
+
+  pinMode(23, OUTPUT);  //Define a porta 23 como saída
+  delay(10);  //Atraso de 10 milissegundos
+
+   // Conecta ao Wi-Fi com o SSID e senha
+  Serial.print("Setting AP (Access Point)…");
+  WiFi.softAP(ssid, password);
+
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(IP);
+
+  sv.begin();
+
+  // Inicialização dos servos
   servo_olhoe.attach(pin_olhoe);
   servo_olhod.attach(pin_olhod);
   servo_pescocos.attach(pin_pescocos);
@@ -72,56 +69,28 @@ void setup() {
   servo_pescocoi.attach(pin_pescocoi);
   servo_bracoe.attach(pin_bracoe);
   servo_bracod.attach(pin_bracod);
-
-  //pinos dc
-  pinMode(motorEPin1, OUTPUT);
-  pinMode(motorEPin2, OUTPUT);
-  pinMode(motorDPin1, OUTPUT);
-  pinMode(motorDPin2, OUTPUT);
-
-  // Configuração dos canais PWM
-  ledcAttachChannel(enableEPin, freq, resolution, pwmChanne0); //pwm motor dc e
-  ledcAttachChannel(enableDPin, freq, resolution, pwmChannel); //pwm motor dc d
-
-  Serial.begin(115200);
-  Serial.println("Testando Motores E e D...");
-
-  Serial.println();
-  Serial.print("Conectando-se a ");
-  Serial.println(ssid);
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-
-  Serial.println();
-  Serial.println("WiFi conectado.");
-  Serial.print("Endereço de IP: ");
-  Serial.println(WiFi.localIP());
-
-  server.begin();
 }
 
 void loop() {
-  WiFiClient client = server.available();
-  if (client) {
-    Serial.println("Novo Cliente Conectado.");
-    String currentLine = "";
-    while (client.connected()) {
-      if (client.available()) {
-        char c = client.read();
-        Serial.write(c);
 
+ WiFiClient client = sv.available(); //Cria o objeto cliente
+
+   if (client) {                             // Se um novo cliente conecta,
+    Serial.println("New Client.");
+    String currentLine = "";                // Faz uma string para guardar informação vindas do cliente
+    while (client.connected()) {            // Loop enquando o cliente estiver conectado
+      if (client.available()) {             // Se houver bytes para ler do cliente
+        char c = client.read();             // Lê o byte
+        Serial.write(c);                    // Printa o byte no monitor serial
+        header += c;
         if (c == '\n') {
+          // Fim do http 
+      
           if (currentLine.length() == 0) {
-            // Enviar a página HTML para o cliente
+            // Responder ao cliente
             client.println("HTTP/1.1 200 OK");
             client.println("Content-type:text/html");
             client.println();
-
-            // HTML com o design desejado
             client.println("<!DOCTYPE html>");
             client.println("<html>");
             client.println("<head>");
@@ -154,6 +123,7 @@ void loop() {
             client.println("</body>");
             client.println("</html>");
             client.println();
+
             break;
           } else {
             currentLine = "";
@@ -162,44 +132,164 @@ void loop() {
           currentLine += c;
         }
 
-        // Comandos baseados nas URLs
-        if (currentLine.endsWith("GET /olhos")) {
-          Serial.println("Acao: Olhos");
-          // Adicione aqui a lógica para "Ação Olhos"
+// Comandos baseados nas URLs
 
+	  //OLHOS
+    if (currentLine.endsWith("GET /olhos")) {
+    Serial.println("Acao: Olhos");
+          
+    client.println("<html><head><meta http-equiv='refresh' content='1;url=/' /></head><body><h1>Movendo Olhos...</h1></body></html>");
         }
-        if (currentLine.endsWith("GET /bracos")) {
-          Serial.println("Acao: Bracos");
-          // Adicione aqui a lógica para "Ação Braços"
         }
-        if (currentLine.endsWith("GET /pescoco")) {
-          Serial.println("Acao: ativa Pescoco");
-          // Adicione aqui a lógica para "Ação Pescoço"
-          servo_pescocoi.write(90);
-          delay(1000);
-          //servo_pescocom.write(90);
-          //delay(1000);
 
-        }
-        if (currentLine.endsWith("GET /cima")) {
-          Serial.println("Movimento: Para Cima");
-          // Adicione aqui a lógica para mover para cima
-        }
-        if (currentLine.endsWith("GET /baixo")) {
-          Serial.println("Movimento: Para Baixo");
-          // Adicione aqui a lógica para mover para baixo
-        }
-        if (currentLine.endsWith("GET /esquerda")) {
-          Serial.println("Movimento: Para Esquerda");
-          // Adicione aqui a lógica para mover para esquerda
-        }
-        if (currentLine.endsWith("GET /direita")) {
-          Serial.println("Movimento: Para Direita");
-          // Adicione aqui a lógica para mover para direita
-        }
-      }
-    }
-    client.stop();
-    Serial.println("Cliente Desconectado.");
-  }
+
+	  //BRACOS
+    if (currentLine.endsWith("GET /bracos")) {
+  	//ESQUERDO
+	  for (int pos = 90; pos <= 180; pos += 1) { // sweep from 0 degrees to 180 degrees
+		servo_bracoe.write(pos);
+		delay(10);             // waits 20ms for the servo to reach the position
+	}
+  	for (int pos = 180; pos >= 90; pos -= 1) { // sweep from 0 degrees to 180 degrees
+		servo_bracoe.write(pos);
+		delay(10);             // waits 20ms for the servo to reach the position
+	}
+    for (int pos = 90; pos >= 60; pos -= 1) { // sweep from 0 degrees to 180 degrees
+		servo_bracoe.write(pos);
+		delay(10);             // waits 20ms for the servo to reach the position
+	}
+  	for (int pos = 60; pos <= 90; pos += 1) { // sweep from 0 degrees to 180 degrees
+		servo_bracoe.write(pos);
+		delay(10);             // waits 20ms for the servo to reach the position
 }
+  
+ 	//DIREITO
+    	
+    for (int pos = 90; pos >= 0; pos -= 1) { // sweep from 0 degrees to 180 degrees
+		servo_bracod.write(pos);
+		delay(10);             // waits 20ms for the servo to reach the position
+ }
+    for (int pos = 0; pos <= 90; pos += 1) { // sweep from 0 degrees to 180 degrees
+		servo_bracod.write(pos);
+		delay(10);             // waits 20ms for the servo to reach the position
+ }
+    client.println("<html><head><meta http-equiv='refresh' content='1;url=/' /></head><body><h1>Movendo Bracos...</h1></body></html>");
+}
+        
+
+	//PESCOCO
+    if (currentLine.endsWith("GET /pescoco")) {
+    Serial.println("Acao: ativa Pescoco");
+
+   //GIRA A CABECA
+   for (int pos = 90; pos <= 180; pos += 1) { // sweep from 0 degrees to 180 degrees
+	 servo_pescocos.write(pos);
+	 delay(10);             // waits 20ms for the servo to reach the position
+ }
+   for (int pos = 180; pos >= 90; pos -= 1) { // sweep from 0 degrees to 180 degrees
+	 servo_pescocos.write(pos);
+	 delay(10);             // waits 20ms for the servo to reach the position
+ }
+   for (int pos = 90; pos >= 60; pos -= 1) { // sweep from 0 degrees to 180 degrees
+	 servo_pescocos.write(pos);
+	 delay(10);             // waits 20ms for the servo to reach the position
+ }
+   for (int pos = 60; pos <= 90; pos += 1) { // sweep from 0 degrees to 180 degrees
+	 servo_pescocos.write(pos);
+	 delay(10);             // waits 20ms for the servo to reach the position
+ }      
+  client.println("<html><head><meta http-equiv='refresh' content='1;url=/' /></head><body><h1>Movendo Pescoco...</h1></body></html>");
+}
+
+
+  //PRA FRENTE
+        
+  if (currentLine.endsWith("GET /cima")) {
+  Serial.println("Movimento: Para Frente");
+  int valor_pwm = 0;  // Variável para armazenar o valor PWM (0-255)
+
+  // Aumenta a velocidade gradualmente de 0% a 100% no sentido horário
+  for (valor_pwm = 0; valor_pwm < 256; valor_pwm++) {
+  analogWrite(PINO_IN1, valor_pwm);  // Aplica o valor PWM no pino IN1
+  analogWrite(PINO_IN3, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de aumentar a velocidade
+  }
+  // Diminui a velocidade gradualmente de 100% a 0% no sentido horário
+  for (valor_pwm = 255; valor_pwm >= 0; valor_pwm--) {
+  analogWrite(PINO_IN1, valor_pwm);  // Reduz o valor PWM no pino IN1
+  analogWrite(PINO_IN3, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de diminuir mais a velocidade
+  }
+   client.println("<html><head><meta http-equiv='refresh' content='1;url=/' /></head><body><h1>Movendo para Frente...</h1></body></html>");
+}
+
+  //PRA TRAS
+
+  if (currentLine.endsWith("GET /baixo")) {
+  Serial.println("Movimento: Para Baixo");
+  int valor_pwm = 0;
+  // Aumenta a velocidade gradualmente de 0% a 100% no sentido anti-horário
+  for (valor_pwm = 0; valor_pwm < 256; valor_pwm++) {
+  analogWrite(PINO_IN2, valor_pwm);  // Aplica o valor PWM no pino IN2
+  analogWrite(PINO_IN4, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de aumentar a velocidade
+  }
+ 
+  // Diminui a velocidade gradualmente de 100% a 0% no sentido anti-horário
+  for (valor_pwm = 255; valor_pwm >= 0; valor_pwm--) {
+  analogWrite(PINO_IN2, valor_pwm);  // Reduz o valor PWM no pino IN2
+  analogWrite(PINO_IN4, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de diminuir mais a velocidade
+  } 
+  client.println("<html><head><meta http-equiv='refresh' content='1;url=/' /></head><body><h1>Movendo para Baixo...</h1></body></html>");
+}
+
+
+	//ESQUERDA
+  if (currentLine.endsWith("GET /esquerda")) {
+  Serial.println("Movimento: Para Esquerda");
+  int valor_pwm = 0;  // Variável para armazenar o valor PWM (0-255)
+
+  // Aumenta a velocidade gradualmente de 0% a 100% no sentido horário
+  for (valor_pwm = 0; valor_pwm < 256; valor_pwm++) {
+  analogWrite(PINO_IN1, valor_pwm);  // Aplica o valor PWM no pino IN1
+  analogWrite(PINO_IN4, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de aumentar a velocidade
+  }
+  // Diminui a velocidade gradualmente de 100% a 0% no sentido horário
+  for (valor_pwm = 255; valor_pwm >= 0; valor_pwm--) {
+  analogWrite(PINO_IN1, valor_pwm);  // Reduz o valor PWM no pino IN1
+  analogWrite(PINO_IN4, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de diminuir mais a velocidade
+  }
+
+  client.println("<html><head><meta http-equiv='refresh' content='1;url=/' /></head><body><h1>Movendo para Esquerda...</h1></body></html>");
+}
+
+	//DIREITA
+  if (currentLine.endsWith("GET /direita")) {
+  Serial.println("Movimento: Para Direita");
+  int valor_pwm = 0;
+  // Aumenta a velocidade gradualmente de 0% a 100% no sentido anti-horário
+  for (valor_pwm = 0; valor_pwm < 256; valor_pwm++) {
+  analogWrite(PINO_IN2, valor_pwm);  // Aplica o valor PWM no pino IN2
+  analogWrite(PINO_IN3, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de aumentar a velocidade
+  }
+ 
+  // Diminui a velocidade gradualmente de 100% a 0% no sentido anti-horário
+  for (valor_pwm = 255; valor_pwm >= 0; valor_pwm--) {
+  analogWrite(PINO_IN2, valor_pwm);  // Reduz o valor PWM no pino IN2
+  analogWrite(PINO_IN3, valor_pwm);  // Aplica o valor PWM no pino IN1
+  delay(50);  // Espera 100 ms antes de diminuir mais a velocidade
+  } 
+
+  client.println("<html><head><meta http-equiv='refresh' content='1;url=/' /></head><body><h1>Movendo para Direita...</h1></body></html>");
+  }
+ }
+}
+    client.stop();
+    Serial.println("Client disconnected.");
+    Serial.println("");
+  }
+
