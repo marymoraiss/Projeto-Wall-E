@@ -21,6 +21,13 @@ Para ter mais informações acesse [Funcionamento](Funcionamento.md)
 
 https://github.com/user-attachments/assets/d8acecab-bfb1-4fd9-8a39-1e654b327d0e
 
+- Movimentação cabeça
+
+https://github.com/user-attachments/assets/c1399134-fb82-42a8-928a-421ee376569e
+
 ---
 Professores Orientadores: Gabriel Wendel Santos da Silva, Luiz Alberto de Azevedo e Renan Augusto Starke
 Alunos: Maria A. de Morais e Raul D. Alves
+
+
+
