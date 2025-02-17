@@ -25,9 +25,20 @@ https://github.com/user-attachments/assets/d8acecab-bfb1-4fd9-8a39-1e654b327d0e
 
 https://github.com/user-attachments/assets/c1399134-fb82-42a8-928a-421ee376569e
 
+- Movimentação pra frente
+
+https://github.com/user-attachments/assets/3b14546e-7dd1-47b7-ae16-8030c0cf5d71
+
+- Movimentação pra tras
+
+https://github.com/user-attachments/assets/335b8df9-63b9-49ee-baab-e7100cd1ab15
+
 ---
 Professores Orientadores: Gabriel Wendel Santos da Silva, Luiz Alberto de Azevedo e Renan Augusto Starke
 Alunos: Maria A. de Morais e Raul D. Alves
+
+
+
 
 
 
