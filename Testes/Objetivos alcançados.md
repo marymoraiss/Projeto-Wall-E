@@ -19,8 +19,7 @@ Para ter mais informações acesse [Funcionamento](Funcionamento.md)
 
 - Movimentação braços
 
-
-
+https://github.com/user-attachments/assets/d8acecab-bfb1-4fd9-8a39-1e654b327d0e
 
 ---
 Professores Orientadores: Gabriel Wendel Santos da Silva, Luiz Alberto de Azevedo e Renan Augusto Starke
